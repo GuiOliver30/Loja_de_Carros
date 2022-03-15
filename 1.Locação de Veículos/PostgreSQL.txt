@@ -12,11 +12,9 @@
 	DATALOCACAO, DATAENTREGA, TOTAL) VALUES
 	(1,3,5,22,'20/02/2019','20/02/2019',1996);
 
-	
 	# Criar o sistema transacional no Postgres, em outro BD
 
  	# Script create.SQL e insert.SQL, relacional.drawio
-
 	sudo -u postgres psql 
 	CREATE DATABASE locadora;
 	\c locadora;

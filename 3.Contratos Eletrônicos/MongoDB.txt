@@ -1,0 +1,11 @@
+	# Contratos.json
+	mongoimport --db dbcontratos --collection contratos --file
+	/home/cloudera/Downloads/contratos.json
+
+	mongo
+
+	use dbcontratos
+	
+	db.contratos.fin() .pretty()
+
+	db.contratos.find({idcliente:"2"}) .pretty()

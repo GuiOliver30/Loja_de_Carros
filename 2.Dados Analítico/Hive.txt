@@ -1,0 +1,8 @@
+	
+	# Criar analítico diretamente no hive
+
+	# Iniciar o Hive = beeline
+	 !connect jdbc:hive2://
+
+	creat database locadora;
+	use locadora;

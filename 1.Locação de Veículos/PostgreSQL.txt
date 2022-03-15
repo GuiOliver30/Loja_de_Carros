@@ -1,0 +1,27 @@
+	
+	INSERT INTO CLIENTES (IDCLIENTE, CPF, CNH, VALIDADECNH, NOME,
+	DATACASDASTRO, DATANASCIMENTO, TELEFONE, STATUS) VALUES 
+	(1,'16528447080','44971318961','30/09/2021','Alvito 
+	Esparargosa','25/01/2019','51390834589','Ativo');
+	INSERT INTO DESPACHANTES (IDDESPACHANTE, NOME, STATUS, FILIAL) VALUES
+	(1,'Carminda Pestana','Ativo','Santa maria');
+	INSERT INTO VEICULOS (IDVEICULO, DATAAQUISICAO, ANO, MODELO, PLACA, STATUS,
+	DIARIA) VALUES (1,'25/01/2019',2019,'Tesla Model S
+	P90D','LWJ2929','Disponivel',1800);
+	INSERT INTO LOCACAO (IDLOCACAO, IDCLIENTE, 
+	DATALOCACAO, DATAENTREGA, TOTAL) VALUES
+	(1,3,5,22,'20/02/2019','20/02/2019',1996);
+
+	
+	# Criar o sistema transacional no Postgres, em outro BD
+
+ 	# Script create.SQL e insert.SQL, relacional.drawio
+
+	sudo -u postgres psql 
+	CREATE DATABASE locadora;
+	\c locadora;
+	
+	SETDATESTYLE TO PostgreSQL,European; 
+
+	\i /home/cloudera/create.sql
+	\i /home/cloudera/insert.sql
